@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://dv5135ulkw53w"]
+
+[ext_resource type="Texture2D" uid="uid://cbarkpfw0cmlq" path="res://textures/purpleBall.png" id="1_oir3m"]
+[ext_resource type="Script" path="res://used_spot.gd" id="2_an13r"]
+
+[node name="used_spot" type="TextureRect"]
+top_level = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -575.0
+offset_top = -325.0
+offset_right = -425.0
+offset_bottom = -175.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(287, 281.5)
+texture = ExtResource("1_oir3m")
+script = ExtResource("2_an13r")

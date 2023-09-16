@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://btkfm7nmoh382"]
+
+[ext_resource type="VideoStream" path="res://sliding_game_vid.ogv" id="1_co2q4"]
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer"]
+offset_right = 534.0
+offset_bottom = 430.0
+stream = ExtResource("1_co2q4")
+autoplay = true

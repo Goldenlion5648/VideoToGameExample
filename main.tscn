@@ -1,0 +1,69 @@
+[gd_scene load_steps=5 format=3 uid="uid://b67d7xnr0w74v"]
+
+[ext_resource type="Script" path="res://game_controller.gd" id="1_aubot"]
+[ext_resource type="PackedScene" uid="uid://dv5135ulkw53w" path="res://used_spot.tscn" id="2_c4431"]
+[ext_resource type="PackedScene" uid="uid://btkfm7nmoh382" path="res://video_stream_player.tscn" id="2_chlst"]
+[ext_resource type="VideoStream" path="res://tangrams2.ogv" id="4_qbcf1"]
+
+[node name="main" type="Node2D"]
+script = ExtResource("1_aubot")
+used_spot = ExtResource("2_c4431")
+
+[node name="sliding_tiles" parent="." instance=ExtResource("2_chlst")]
+
+[node name="blobs" parent="." instance=ExtResource("2_chlst")]
+visible = false
+layout_direction = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1920.0
+offset_bottom = 1088.0
+scale = Vector2(0.42, 0.42)
+size_flags_horizontal = 8
+size_flags_vertical = 8
+stream = ExtResource("4_qbcf1")
+
+[node name="current_mouse_color" type="ColorRect" parent="."]
+offset_left = 976.0
+offset_top = 432.0
+offset_right = 1090.0
+offset_bottom = 566.0
+
+[node name="goal_color" type="ColorRect" parent="."]
+offset_left = 976.0
+offset_top = 31.0
+offset_right = 1090.0
+offset_bottom = 165.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="score_label" type="RichTextLabel" parent="CanvasLayer"]
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -310.0
+offset_top = -130.0
+offset_right = -3.0
+offset_bottom = -17.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 70
+text = "Score:"
+
+[node name="high_score" type="RichTextLabel" parent="CanvasLayer"]
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -310.0
+offset_right = -3.0
+offset_bottom = 113.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 30
+text = "Score:"
